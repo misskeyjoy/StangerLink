@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="angelbeats.com.activity"
+    android:installLocation="preferExternal"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 来电消音 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <permission
+        android:name="cn.bmob.permission.push"
+        android:protectionLevel="normal" >
+    </permission>
+
+    <uses-permission android:name="cn.bmob.permission.push" />
+
+    <application
+        android:name="angelbeats.com.applcation.StrangerLinkApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Black.NoTitleBar" >
+        <activity
+            android:name="angelbeats.com.activity.Chat"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="angelbeats.com.activity.FirstLoad"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="angelbeats.com.activity.Login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="angelbeats.com.activity.Register_phone"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="angelbeats.com.activity.Register_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="angelbeats.com.activity.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="angelbeats.com.activity.NearPeopleActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="angelbeats.com.activity.Game1"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="angelbeats.com.game2.Game2"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="angelbeats.com.game2.Game2_next"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="angelbeats.com.game2.Game2_key"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="angelbeats.com.activity.UserInfo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="angelbeats.com.activity.MyInfo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="angelbeats.com.activity.UpdateNick"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="angelbeats.com.activity.ShakeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="YX0Fpp1MKihq3SOZHu5lbCXG" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" >
+                </action>
+            </intent-filter>
+        </service>
+
+        <!-- IM聊天所需的Push start -->
+        <service
+            android:name="cn.bmob.push.lib.service.PushService"
+            android:exported="true"
+            android:label="PushService"
+            android:permission="cn.bmob.permission.push"
+            android:process="cn.bmob.push" >
+            <intent-filter>
+                <action android:name="cn.bmob.push.lib.service.PushService" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="cn.bmob.push.PushReceiver" >
+            <intent-filter android:priority="2147483647" > <!-- 优先级加最高 -->
+                <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <!-- 解锁完成后会调用 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <!-- 监听网络连通性 -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".MessageReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.bmob.push.action.MESSAGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- IM聊天所需的Push end -->
+        <!-- 启动定时检测操作 -->
+        <service
+            android:name="cn.bmob.im.poll.BmobPollService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.bmob.im.service.BmobPollService" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/linealayout_bottom_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/imageView_game2_key"
+            android:layout_width="@dimen/x600"
+            android:layout_height="@dimen/x800"
+            android:layout_gravity="center"
+            android:src="@drawable/head_wu"
+            tools:ignore="ContentDescription" >
+
+        </ImageView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pictrue_key_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:textSize="@dimen/x40"
+        android:textColor="@color/black"
+        android:text="@string/game2_tips_picture_pass" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/pictrue_key_picturename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:ems="10"
+        android:hint="@string/game2_tips_picture_key" >
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/key_bt_ok"
+            android:layout_width="@dimen/x200"
+            android:layout_height="@dimen/x140"
+            android:layout_margin="@dimen/x40"
+            android:background="@drawable/btn_selector"
+            android:text="@string/game2_key_bt_ok"
+            android:textSize="@dimen/x40"
+            tools:ignore="ButtonStyle,MissingPrefix" />
+
+        <Button
+            android:id="@+id/key_cancle"
+            android:layout_width="@dimen/x200"
+            android:layout_height="@dimen/x140"
+            android:layout_margin="@dimen/x40"
+            android:background="@drawable/btn_selector"
+            android:text="@string/game2_key_bt_cancle"
+            android:textSize="@dimen/x40"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+
+</LinearLayout>

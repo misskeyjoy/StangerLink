@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x160"
+    android:background="@color/linealayout_bottom_color"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/consonvertion"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/consonvertionimageview"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/x100"
+            android:layout_marginTop="@dimen/x10"
+            android:gravity="center"
+            android:src="@drawable/huihua2" />
+
+        <TextView
+            android:id="@+id/consonvertion_textview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/x5"
+            android:gravity="center"
+            android:text="@string/consonvertion_text"
+            android:textColor="@color/text_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/friend_list"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/friend_list_imageview"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/x100"
+            android:layout_marginTop="@dimen/x10"
+            android:src="@drawable/lianxiren1" />
+
+        <TextView
+            android:id="@+id/friend_list_textview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/friend_list" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/own_setting"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/own_setting_imageview"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/x100"
+            android:layout_marginTop="@dimen/x10"
+            android:src="@drawable/shezhi1" />
+
+        <TextView
+            android:id="@+id/own_setting_textview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/own_setting" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x200"
+    android:orientation="horizontal" >
+
+    <angelbeats.com.view.RoundedImageView
+        android:id="@+id/heade_cons_view"
+        android:layout_width="@dimen/x150"
+        android:layout_height="@dimen/x150"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginTop="@dimen/x10"
+        android:scaleType="fitXY"
+        android:src="@drawable/header_example"
+        app:riv_border_color="@color/linealayout_bottom_color"
+        app:riv_border_width="3dip"
+        app:riv_corner_radius="100dip"
+        app:riv_oval="false" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_recent_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginTop="@dimen/x40"
+            android:text="user_name"
+            android:textSize="@dimen/x50" />
+
+        <TextView
+            android:id="@+id/tv_recent_msg"
+            android:layout_width="fill_parent"
+           android:textSize="@dimen/x40"
+            android:layout_height="@dimen/x50"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginTop="@dimen/x30"
+            android:text="message" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+             android:layout_margin="@dimen/x50"
+            android:id="@+id/tv_recent_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_recent_unread"
+            android:layout_centerVertical="true"
+            android:text="时间" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/x80"
+            android:id="@+id/tv_recent_unread"
+            android:layout_width="16dip"
+            android:layout_height="16.0dip"
+            android:background="@drawable/list_newmessage"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="10.0dip" />
+
+    </LinearLayout>
+
+</LinearLayout>

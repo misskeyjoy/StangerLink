@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/liftstyle" >
+
+    <include
+        android:id="@+id/common_head"
+        layout="@layout/common_header" />
+
+    <angelbeats.com.view.RoundedImageView
+        android:id="@+id/head_pic"
+        android:layout_width="@dimen/x240"
+        android:layout_height="@dimen/x240"
+        android:layout_below="@+id/common_head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x20"
+        android:contentDescription="@string/head_pic"
+        android:src="@drawable/head_wu"
+        app:riv_border_color="@color/linealayout_bottom_color"
+        app:riv_border_width="3dip"
+        app:riv_corner_radius="100dip"
+        app:riv_oval="false" />
+
+    <angelbeats.com.view.ClearEditText
+        android:id="@+id/name_edit"
+        android:layout_width="@dimen/x650"
+        android:layout_height="@dimen/x120"
+        android:layout_below="@+id/head_pic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x40"
+        android:background="@drawable/edittext_layerlist"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:padding="@dimen/x20" >
+
+        <requestFocus />
+    </angelbeats.com.view.ClearEditText>
+
+    <angelbeats.com.view.ClearEditText
+        android:id="@+id/passwd_edit"
+        android:layout_width="@dimen/x650"
+        android:layout_height="@dimen/x120"
+        android:layout_below="@+id/name_edit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext_layerlist"
+        android:hint="@string/passwd"
+        android:inputType="textPassword"
+        android:padding="@dimen/x20" />
+
+    <angelbeats.com.view.ClearEditText
+        android:id="@+id/con_passwd_edit"
+        android:layout_width="@dimen/x650"
+        android:layout_height="@dimen/x120"
+        android:layout_below="@+id/passwd_edit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext_layerlist"
+        android:hint="@string/conpasswd"
+        android:inputType="textPassword"
+        android:padding="@dimen/x20" />
+
+    <Button
+        android:id="@+id/btnregister"
+        android:layout_width="@dimen/x650"
+        android:layout_height="@dimen/x120"
+        android:layout_below="@+id/con_passwd_edit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x60"
+        android:background="@drawable/btn_selector"
+        android:text="@string/register" />
+
+</RelativeLayout>

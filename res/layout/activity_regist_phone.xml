@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/linealayout_color"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_head"
+        layout="@layout/common_header" />
+    <Button
+        android:id="@+id/register_phone_bt_next"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/x100"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_selector"
+        android:text="@string/regesit_phone_bt_next" />
+
+    <angelbeats.com.view.ClearEditText
+        android:id="@+id/register_check_edit_text"
+        android:layout_width="127dp"
+        android:layout_height="@dimen/x150"
+        android:layout_above="@+id/register_phone_bt_next"
+        android:layout_alignLeft="@+id/register_phone_phone_edit"
+        android:background="@drawable/edittext_layerlist"
+        android:ems="10"
+        android:hint="@string/regesit_phone_edit_tips"
+        android:inputType="number"
+        android:padding="@dimen/x20" />
+    
+    
+
+    <angelbeats.com.view.ClearEditText
+        android:id="@+id/register_phone_phone_edit"
+        android:layout_width="@dimen/x500"
+        android:layout_height="@dimen/x150"
+        android:layout_alignLeft="@+id/register_phone_bt_next"
+        android:layout_below="@+id/common_head"
+        android:layout_margin="@dimen/x20"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/edittext_layerlist"
+        android:ems="10"
+        android:hint="@string/regesit_phone_edit_text"
+        android:inputType="phone"
+        android:padding="@dimen/x20" />
+
+    <Button
+        android:id="@+id/register_phone_bt_send"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x500"
+        android:layout_alignBottom="@+id/register_check_edit_text"
+        android:layout_alignRight="@+id/register_phone_phone_edit"
+        android:layout_alignTop="@+id/register_check_edit_text"
+        android:layout_margin="@dimen/x20"
+        android:layout_toRightOf="@+id/register_check_edit_text"
+        android:background="@drawable/btn_selector"
+        android:text="@string/regesit_phone_bt_send" />
+
+</RelativeLayout>

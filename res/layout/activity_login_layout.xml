@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:background="@color/linealayout_color"
+    android:orientation="vertical" >
+
+    <angelbeats.com.view.RoundedImageView
+      android:id="@+id/heade_login_view"
+        android:layout_width="@dimen/imagview_width"
+        android:layout_height="@dimen/imagview_width"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:scaleType="center"
+        android:src="@drawable/header_example"
+        app:riv_border_color="@color/linealayout_bottom_color"
+        app:riv_border_width="@dimen/x6"
+        app:riv_corner_radius="100dip"
+        app:riv_oval="false" />
+
+    <angelbeats.com.view.ClearEditText
+        android:id="@+id/name_login_btn"
+        android:layout_width="@dimen/x650"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/x40"
+        android:background="@drawable/edittext_layerlist"
+        android:hint="@string/tips_login"
+        android:padding="@dimen/x40" />
+
+    <angelbeats.com.view.ClearEditText
+        android:id="@+id/passwd_login_edit"
+        android:layout_width="@dimen/x650"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/x40"
+        android:background="@drawable/edittext_layerlist"
+        android:hint="@string/tips_login_pass"
+        android:inputType="textPassword"
+        android:padding="@dimen/x40" />
+
+    <Button
+        android:id="@+id/submit_login_btn"
+        android:layout_width="@dimen/x600"
+        android:layout_height="@dimen/x130"
+        android:layout_gravity="center"
+        android:textSize="@dimen/x40"
+        android:layout_marginTop="@dimen/x100"
+        android:background="@drawable/btn_selector"
+        android:text="@string/login" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         >
+
+        <Button
+            android:id="@+id/forgetPasswd_login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/text_color"
+            android:layout_marginBottom="0dp"
+            android:background="#F0F8FF"
+             android:textSize="@dimen/x45"
+            android:text="@string/forget_pass" />
+
+        <Button
+            android:id="@+id/register_login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/x45"
+            android:background="@color/linealayout_color"
+            android:text="@string/regist" />
+
+    </RelativeLayout>
+
+</LinearLayout>

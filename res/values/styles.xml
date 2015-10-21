@@ -1,0 +1,121 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="DialogTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="Angelbeats">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Angelbeats.TextView">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Angelbeats.TextView._Black">
+        <item name="android:textColor">#3e3e39</item>
+    </style>
+
+    <style name="Angelbeats.ImageView">
+        <item name="android:contentDescription">@string/app_name</item>
+    </style>
+
+    <style name="Angelbeats.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48.0dip</item>
+    </style>
+
+    <style name="Angelbeats.TextView._White">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="Angelbeats.Button.theme" parent="Angelbeats.TextView._White">
+        <item name="android:background">@drawable/btn_login_selector</item>
+    </style>
+
+    <style name="Angelbeats.Button.logout" parent="Angelbeats.TextView._White">
+        <item name="android:background">@drawable/btn_logout_selector</item>
+    </style>
+
+    <style name="ActionBar">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/top_bar</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">@dimen/base_action_bar_height</item>
+    </style>
+
+    <style name="ActionBarTitle">
+        <item name="android:textSize">@dimen/base_action_bar_title_size</item>
+        <item name="android:textColor">@color/base_color_text_white</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">1.0dip</item>
+    </style>
+
+    <style name="chat_text_date_style">
+        <item name="android:padding">2dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">#bfbfbf</item>
+    </style>
+
+    <style name="chat_content_date_style">
+        <item name="android:minHeight">50dp</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">#bfbfbf</item>
+    </style>
+
+    <style name="Theme_AudioDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="chat_text_name_style">
+        <item name="android:textColor">#818181</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="back_button_style" parent="android:Widget.Holo.Light.ImageButton">
+        <item name="android:contentDescription">@string/app_name</item>
+        <item name="android:paddingLeft">15dip</item>
+        <item name="android:paddingRight">15dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">48dip</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:src">@drawable/back</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+</resources>
